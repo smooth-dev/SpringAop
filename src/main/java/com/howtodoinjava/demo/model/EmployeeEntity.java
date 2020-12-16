@@ -24,7 +24,16 @@ public class EmployeeEntity {
     @Column(name="email", nullable=false, length=200)
     private String email;
     
-    public Long getId() {
+    public EmployeeEntity(String firstName,String lastName,String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	public EmployeeEntity() {
+	}
+
+	public Long getId() {
 		return id;
 	}
 
